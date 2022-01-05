@@ -1,8 +1,10 @@
 let table;
 let days = [];
+let mont;
 
 function preload(){
   table = loadTable("data.csv", "csv", "header");
+  mont = loadFont('Mont-HeavyDEMO.otf');
 }
 
 // setup() runs once at the load of the page.
@@ -62,7 +64,7 @@ function draw(){
   text("hover on a dot to see more!", 840, 110);
   rotate(-0.1);
   textSize(30);
-  textFont('Mont');
+  textFont(mont);
   text("S", 50, 50);
   text("M", 150, 50);
   text("T", 250, 50);
@@ -162,7 +164,7 @@ function draw(){
       rect(800, 160, 500, 500, 30);
       fill(0);
       textSize(20);
-      textFont('Mont');
+      textFont(mont);
       text(day.date, 830, 210);
       textSize(16);
       textFont("Avenir");
